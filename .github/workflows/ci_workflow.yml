@@ -13,6 +13,7 @@ jobs:
     uses: ./.github/workflows/build_esp_app.yml
 # Disable this job if you don't use it for hardware testing
   test_project:
+    if: ${{ false }}  # Disable this job as default
     name: Test Project
     uses: ./.github/workflows/test_esp_app.yml
     needs: build_project
